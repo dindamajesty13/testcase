@@ -17,7 +17,7 @@
          $data = $personModel
              ->select('ktp.*, propinsi.*')
              ->join('propinsi', 'ktp.id_prop = propinsi.id_prop')
-             ->findAll(1);
+             ->first();
  
          return $this->respond($data);
      }
